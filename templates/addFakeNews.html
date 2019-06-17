@@ -6,7 +6,6 @@
     <title>Add fake news</title>
     <link href="../style/addFakeNews.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../javascript/addFakeNews.js"></script>
   </head>
 
   <body>
@@ -15,23 +14,23 @@
     <div id= "summary"></div>
 
     <form>
-      <div class= "fakeNews">
-      <div id="link">
+      <div class= "fakeNews"></div>
+
       Title of fake news <input type="text" id="title">
       <br>
       <br>
-      Link of fake news <input type="text" id="link1">
+      Link of fake news <input type="text" id="link">
       <br>
       <br>
       Add description of fake news here
       <br><textarea placeholder="Enter description here" name="message" rows="10" cols="50"></textarea>
-      </div>
     </form>
 
     <br>
 
-    <input class = clickableArea type = "submit" value = "Submit Fake News"></input>
-
-
+    <div class="clickableArea" type= "submit" value= "Submit Fake News">
+      Submit fake news
+    </div>
+  <script src="../javascript/addFakeNews.js"></script>
   </body>
   </html>
