@@ -48,7 +48,10 @@ class NewsResults(webapp2.RequestHandler):
 
 class AddFakeNews(webapp2.RequestHandler):
     def post(self):
-        pass
+        addFakeNews = the_jinja_env.get_template('templates/addFakeNews.html')
+        self.response.write(addFakeNews.render())
+
+        fakenews_title = self.request.get()
 
 
 
