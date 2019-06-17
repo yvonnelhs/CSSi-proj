@@ -1,15 +1,15 @@
-function writeFakeNews() {
-  $("#summary").empty();
-  let title = $("#title")[0].value;
-  let link = $("#link")[0].value;
+//function writeFakeNews() {
+//  $("#summary").empty();
+//  let title = $("#title")[0].value;
+//  let link = $("#link")[0].value;
 
-  let text = "title: " + title + "link:" + link
+//  let text = "title: " + title + "link:" + link
 
-  $("#summary").append("fake news reported: " + text);
-}
+// $("#summary").append("fake news reported: " + text);
+//}
 
-function initializeJs() {
-  $(".clickableArea").click(writeFakeNews);
-}
+//function initializeJs() {
+//  $(".clickableArea").click(writeFakeNews);
+//}
 
-$(document).ready(initializeJs);
+//$(document).ready(initializeJs);
