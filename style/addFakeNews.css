@@ -1,1 +1,6 @@
-
+.clickableArea {
+  border: 2px solid grey;
+  background-color: #8496b5;
+  width: fit-content;
+  padding: 5px;
+}
