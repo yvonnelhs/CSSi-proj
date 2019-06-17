@@ -16,17 +16,19 @@
     <form>
       <div class= "fakeNews"></div>
 
-      Title of fake news <input type="text" id="title">
+      Title of fake news <input type="text" name="title">
       <br>
       <br>
-      Link of fake news <input type="text" id="link">
+      Link of fake news <input type="text" name="link">
       <br>
       <br>
       Add description of fake news here
       <br><textarea placeholder="Enter description here" name="message" rows="10" cols="50"></textarea>
     </form>
     <br>
+    <form method = "post" action = "/homepage">
     <input class = "clickableArea" type = "submit" value = "Submit Fake News"></input>
+    </form>
   <script src="../javascript/addFakeNews.js"></script>
   </body>
   </html>
