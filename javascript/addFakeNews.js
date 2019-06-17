@@ -3,19 +3,12 @@ function writeFakeNews() {
   let title = $("#title").value();
   let link = $("#link1").value();
 
-  let text = "";
-  if (title != "" && link != "") {
-    text = title + " and " + link;
-  } else if (title == "") {
-    text = link;
-  } else {
-    text = title;
-  }
+  let text = "title: " + title + "link:" + link
 
   $("#summary").append("fake news reported: " + text);
 
 function initializeJs() {
-  $("#submitButton").click(writeFakeNews);
+  $(".clickableArea").append("hi");
 }
 
 $(document).ready(initializeJs);
