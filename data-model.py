@@ -1,7 +1,6 @@
 from google.appengine.ext import ndb
-from google.appengine.ext import users
 
-class User(ndb.model):
-    username=ndb.StringProperty(required=True)
-    birthday=ndb.DateTimeProperty(required=True)
-    
+class Post(ndb.model):
+    title = ndb.StringProperty(required=True)
+    description = ndb.DateTimeProperty(required=True)
+    link = ndb.StringProperty(required = False)

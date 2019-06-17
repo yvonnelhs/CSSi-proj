@@ -49,9 +49,19 @@ class NewsResults(webapp2.RequestHandler):
 class AddFakeNews(webapp2.RequestHandler):
     def post(self):
         addFakeNews = the_jinja_env.get_template('templates/addFakeNews.html')
-        self.response.write(addFakeNews.render())
 
-        fakenews_title = self.request.get()
+        fakenews_title = self.request.get('#title')
+        fakenews_link = self.request.get('#link')
+        fakenews_message = self.request.get('message')
+
+        fakenews = data_model.Post(
+            title = fakenews_title,
+            description = fakenews_message,
+            message = fakenews_message
+        )
+
+        fakenews.put()
+        self.response.write(addFakeNews.render())
 
 
 
