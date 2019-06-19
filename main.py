@@ -72,33 +72,34 @@ class HomePage(webapp2.RequestHandler):
         )
 
         fakenews.put()
+        # if(len(Post.query().fetch())!=0):
+        #     for i in range(len(Post.query().fetch())):
+        #         print (Post.query().fetch()[i].date.strftime('%Y-%m-%d %H:%M:%S %Z'))
+        #         print(Post.query().fetch()[0],Post.query().fetch()[1].date)
+        #         print(isNewer(Post.query().fetch()[0],Post.query().fetch()[1]))
+        #         #sort by latest to earliest
+        #         listofPosts=Post.query().fetch()
+        #         while(isAscending(listofPosts)==False):
+        #             for i in range(len(listofPosts)-1):
+        #                 if(isNewer(listofPosts[i],listofPosts[i+1])):
+        #                     x=listofPosts[i]
+        #                     listofPosts[i]=listofPosts[i+1]
+        #                     listofPosts[i+1]=x
 
-#        for i in range(len(Post.query().fetch())):
-#        print(Post.query().fetch()[0],Post.query().fetch()[1].date)
-#        print(isNewer(Post.query().fetch()[0],Post.query().fetch()[1]))
-#        #sort by latest to earliest
-#        listofPosts=Post.query().fetch()
-#        while(isAscending(listofPosts)==False):
-#            for i in range(len(listofPosts)-1):
-#                if(isNewer(listofPosts[i],listofPosts[i+1])):
-#                    x=listofPosts[i]
-#                    listofPosts[i]=listofPosts[i+1]
-#                    listofPosts[i+1]=x
 
-
-#        dict = {
-#            "fakeNewsLink": fakenews_link,
-#            "fakeNewsMessage": fakenews_message,
-#            "fakeNewsTitle": fakenews_title
-#        }
-        title = Post.query().fetch()[0].title
-        link = Post.query().fetch()[0].link
-        message = Post.query().fetch()[0].message
         dict = {
-            "fakeNewsTitle": title,
-            "fakeNewsLink": link,
-            "fakeNewsMessage": message,
-        }
+           "fakeNewsLink": fakenews_link,
+           "fakeNewsMessage": fakenews_message,
+           "fakeNewsTitle": fakenews_title
+       }
+       # title = Post.query().fetch()[0].title
+       # link = Post.query().fetch()[0].link
+       # message = Post.query().fetch()[0].message
+       # dict = {
+       #     "fakeNewsTitle": title,
+       #      "fakeNewsLink": link,
+       #      "fakeNewsMessage": message,
+       #  }
         self.response.write(postresults.render(dict))
 
 
