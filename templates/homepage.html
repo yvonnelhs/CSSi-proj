@@ -1,77 +1,95 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>CheckMe</title>
+<html>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<head>
+  <meta charset ="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-  <style>
-  .bigg{
-    font-size:800%;
-  }
-  .subtext{
-    margin-top:-03%;
-  }
-  .searchbar{
-     margin:0 auto;
-     width:025%;
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+  <link rel="icon" href="../icon2.png">
+  <link rel="stylesheet" href="../style/homepage.css">
+  <title>FactIt</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top flex-md-nowrap p-0 shadow">
-    <a href="#" class="navbar-brand col-sm-3 col-md-2 mr-0" style="font-family: 'PT Sans Narrow', sans-serif; ">FactIt</a>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active">Home</a>/
-        </div>
-        <div class="navbar-nav ml-auto">
-            <a href="#" class="nav-item nav-link">Login</a>
-        </div>
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color:#2f3133;">
+    <a class="navbar-brand" href="#">
+      <img src="../icon2.png" >
+    </a>
+    <a class="navbar-brand factit logo" href="#">
+      FactIt
+    </a>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+                <li><a href="/login" class="login">Login</a>
+                </li>
+                <li>
+                    <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="/register">Sign up!</a>
+                    </div>
+                </li>
+            </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="#" class="navbar-brand col-sm-3 col-md-2 mr-0" style="font-family: 'PT Sans Narrow', sans-serif; ">FactIt</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#" class="login">Login</a></li>
-    </ul>
-  </div>
-</nav>
+  <!--Navigation Bar Ends Here-->
+  <br>
+
   <h1 class="text-center bigg" style="font-family: 'PT Sans Narrow', sans-serif;">FactIt.</h1>
-  <h3 class="text-center subtext" style="font-size:90%;">The world's leading resource on fake news.</h3>
+  <h3 class="text-center subtext lead">The world's leading resource on fake news.</h3>
+  <br><br>
 
-  <form method = "post" action = "/newsresults" class="searchbar">
-    <input type = "text" name = "user_search" ></input>
-    <input type = "submit" value = "Search"></input>
-  </form>
-
-  <div>
-    <a href="#TopNews1">TopNews1</a>
-    <a href="#TopNews2">TopNews2</a>
-    <a href="#TopNews3">TopNews3</a>
-    <a href="#TopNews4">TopNews4</a>
-    <a href="#TopNews5">TopNews5</a>
+  <div class="col-md-6 col-md-offset-3">
+    <form role="form" id="form-buscar" method = "post" action = "/newsresults">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" type="text" name="search" placeholder="Search..." required/>
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="submit" value="Search">
+              Search
+              <i class="glyphicon glyphicon-search" style="margin-left:3px;margin-right:3px;"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
   </div>
 
-  <div class = "postfeed"></div>
-
-  <form method = "post" action = "/addFakeNews">
-    <br>
-    <br>
-    <input type = "submit" value = "Add Fake News"></input>
-  </form>
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-8" style="background-color:red;">
+      Posts go here.
+    </div>
+    <div class="col-sm-3 col-sm-offset-1">
+      <b>Top fake news of the week:</b>
+      <ol>
+        <li>
+          <a href="#TopNews1">TopNews1</a>
+        </li>
+        <li>
+          <a href="#TopNews2">TopNews2</a>
+        </li>
+        <li>
+          <a href="#TopNews3">TopNews3</a>
+        </li>
+        <li>
+          <a href="#TopNews4">TopNews4</a>
+        </li>
+        <li>
+          <a href="#TopNews5">TopNews5</a>
+        </li>
+      </ol>
+      <br><br>
+      <div class="footer" style="font-size:70%;">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </div>
+  </div>
+</div>
 
 </body>
 
+</html>
 
-<html>
+<!--https://bootsnipp.com/snippets/m13mN-->
