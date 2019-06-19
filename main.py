@@ -81,7 +81,7 @@ class HomePage(webapp2.RequestHandler):
         listofPosts=Post.query().fetch()
         while(isAscending(listofPosts)==False):
             for i in range(len(listofPosts)-1):
-                if(!isNewer(listofPosts[i],listofPosts[i+1])):
+                if(isNewer(listofPosts[i],listofPosts[i+1])):
                     x=listofPosts[i]
                     listofPosts[i]=listofPosts[i+1]
                     listofPosts[i+1]=x
