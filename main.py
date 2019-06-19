@@ -122,7 +122,7 @@ class NewsResults(webapp2.RequestHandler):
     pass
 
 class AboutUs(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         about = the_jinja_env.get_template('templates/aboutUs.html')
         self.response.write(about.render())
 
