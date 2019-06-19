@@ -1,5 +1,17 @@
+body {
+  background-color: #f4f8f9;
+}
+
 h1{
-  font-family: 'Josefin Sans', sans-seri;
+  font-family: 'Muli', sans-serif;
+  color: #62789e;
+}
+
+.request{
+  font-family: 'Muli', sans-serif;
+  padding: 1%;
+  font-size: 115%;
+
 }
 
 
@@ -49,12 +61,30 @@ a > img {
 }
 
 
-.clickableArea {
-  border: 2px solid grey;
-  background-color: #8496b5;
-  width: fit-content;
-  padding: 5px;
+.btn.btn-success {
+  background-color: #2f3133;
+  border-color: #2f3133;
+  color: #dbdee0;
+  border-width: 0px;
+  margin-top: 10px
 }
+
+.btn.btn-success:hover {
+  color: #d9dde0;
+  border-width: 0px;
+  background-color: #45494c;
+}
+
+input[type="text"] {
+  width: 100%;
+  display: inline-flex;
+}
+
+textarea {
+  width: 100%;
+  display: inline-flex;
+}
+
 
 input[type="text"] {
   width: 100%;
