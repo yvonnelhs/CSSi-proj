@@ -1,1 +1,87 @@
+body {
+  background-color: #f4f8f9;
+}
 
+h1{
+  font-family: 'Muli', sans-serif;
+  color: #62789e;
+}
+
+.request{
+  font-family: 'Muli', sans-serif;
+  padding: 1%;
+  font-size: 115%;
+
+}
+
+
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 240%;
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar { //removes default border radius of 4px
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%
+
+}
+
+.factit {
+  font-family: 'Monoton', cursive;
+}
+
+a > img {
+  height:35px;
+}
+
+.logo, .logo:enabled {
+  padding-left: 0;
+  padding-bottom: 10px;
+  margin-left: -6px;
+  color: #899ec1;
+}
+
+.login,.signup,.aboutus {
+  color: #dbdee0;
+  font-size: 110%
+}
+
+.login:hover,.signup:hover,.aboutus:hover, {
+  color: #859cc4;
+}
+
+.logo:hover{
+  color: #dbdee0;
+}
+
+#title {
+  font-family: 'Muli', sans-serif;
+  font-size: 350%;
+  color: #62789e;
+}
+
+#content {
+  font-family: 'Muli', sans-serif;
+  font-size: 130%;
+  background-color:#e6e8ed;
+  padding: 10px;
+
+
+}
+
+#link {
+  font-family: 'Muli', sans-serif;
+  font-size: 110%;
+}
+
+.line{
+  border-top: 2px solid;
+  margin-top: 0px;
+  color: #62789e;
+}

@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset ="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton|Muli&display=swap" rel="stylesheet">
+  <link rel="icon" href="../icon2.png">
+  <link href="../post/post.css" rel="stylesheet">
+  <title>FactIt</title>
+</head>
+
+<body>
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color:#2f3133;">
+      <a class="navbar-brand" href="#">
+        <img src="../icon2.png" >
+      </a>
+      <a class="navbar-brand factit logo" href="#">
+        FactIt
+      </a>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/aboutus" class="aboutus">About us</a>
+          </li>
+          <li>
+            <a href="/login" class="login">Log in</a>
+          </li>
+          <li>
+            <a href="/signup" class="signup">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Navigation Bar Ends Here-->
+
+    <div class="col-md-10 col-md-offset-1">
+      <div id="title">{{title}}</div>
+      <br>
+      <hr class="line">
+      <div id="content">description of fake news:
+        <br>
+        {{content}}</div>
+      <br>
+      <div id="link">Find out more here ... {{link}}</div>
