@@ -1,3 +1,6 @@
+body {
+  background-color: #f4f8f9;
+}
 
 .navbar-brand {
   color: #ffffff;
@@ -30,12 +33,12 @@ a > img {
   color: #899ec1;
 }
 
-.login,.signup {
+.login,.signup,.aboutus {
   color: #dbdee0;
   font-size: 110%
 }
 
-.login:hover,.signup:hover {
+.login:hover,.signup:hover,.aboutus:hover, {
   color: #859cc4;
 }
 
@@ -113,12 +116,15 @@ body { //prevent overlay with navbar
 * {
   -webkit-border-radius: 1px !important;
      -moz-border-radius: 1px !important;
+
           border-radius: 1px !important;
 }
+
 #logo {
 color: #62789e;
 width:100%;
 }
+
 #logo h1 {
     font-size: 60px;
     text-shadow: 1px 2px 3px #999;
