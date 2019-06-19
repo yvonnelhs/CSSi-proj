@@ -9,6 +9,23 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+def isNewer(a,b):
+    #print (Post.query().fetch()[i].date.strftime('%Y-%m-%d %H:%M:%S %Z'))
+    if (int(a.date.strftime('%Y'))>=int(b.date.strftime('%Y'))):
+        if (int(a.date.strftime('%m'))>=int(b.date.strftime('%m'))):
+            if (int(a.date.strftime('%d'))>=int(b.date.strftime('%d'))):
+                if (int(a.date.strftime('%H'))>=int(b.date.strftime('%H'))):
+                    if (int(a.date.strftime('%M'))>=int(b.date.strftime('%M'))):
+                        if (int(a.date.strftime('%S'))>=int(b.date.strftime('%S'))):
+                            return True
+    return False
+
+def isAscending(list):
+    for i in range(len(list)-1):
+        if(isNewer(list[i],list[i+1])==False):
+            return False
+    return True
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -55,6 +72,20 @@ class HomePage(webapp2.RequestHandler):
         )
 
         fakenews.put()
+
+        for i in range(len(Post.query().fetch())):
+            print (Post.query().fetch()[i].date.strftime('%Y-%m-%d %H:%M:%S %Z'))
+        print(Post.query().fetch()[0],Post.query().fetch()[1].date)
+        print(isNewer(Post.query().fetch()[0],Post.query().fetch()[1]))
+        #sort by latest to earliest
+        listofPosts=Post.query().fetch()
+        while(isAscending(listofPosts)==False):
+            for i in range(len(listofPosts)-1):
+                if(!isNewer(listofPosts[i],listofPosts[i+1])):
+                    x=listofPosts[i]
+                    listofPosts[i]=listofPosts[i+1]
+                    listofPosts[i+1]=x
+
 
         dict = {
             "fakeNewsLink": fakenews_link,
@@ -108,4 +139,3 @@ app = webapp2.WSGIApplication([
     ('/addFakeNews', AddFakeNews),
     ('/aboutus', AboutUs),
 ], debug = True)
-
