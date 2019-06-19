@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton|Muli&display=swap" rel="stylesheet">
   <link rel="icon" href="../icon2.png">
   <link rel="stylesheet" href="../style/homepage.css">
   <title>FactIt</title>
@@ -26,26 +25,34 @@
     </a>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-                <li><a href="/login" class="login">Login</a>
-                </li>
-                <li>
-                    <div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="/register">Sign up!</a>
-                    </div>
-                </li>
-            </ul>
+        <li>
+          <a href="/aboutus" class="login">About us</a>
+        </li>
+        <li>
+          <a href="/login" class="login">Log in</a>
+        </li>
+        <li>
+          <a href="/signup" class="signup">Sign up</a>
+        </li>
+      </ul>
     </div>
   </nav>
   <!--Navigation Bar Ends Here-->
   <br>
 
-  <h1 class="text-center bigg" style="font-family: 'PT Sans Narrow', sans-serif;">FactIt.</h1>
+  <h1 class="text-center bigg" style="font-family: 'Monoton', cursive;">FactIt.</h1>
   <h3 class="text-center subtext lead">The world's leading resource on fake news.</h3>
-  <br><br>
+
+  <div class="col-md-3 col-md-offset-5">
+    <button class="btn btn-success" type="submit" value="Add ">
+      Click here to add fake news
+    </button>
+  </div>
 
   <div class="col-md-6 col-md-offset-3">
     <form role="form" id="form-buscar" method = "post" action = "/newsresults">
       <div class="form-group">
-        <div class="input-group">
+        <div class="input-group" style="margin-bottom:40px;">
           <input class="form-control" type="text" name="search" placeholder="Search..." required/>
           <span class="input-group-btn">
             <button class="btn btn-success" type="submit" value="Search">
@@ -63,23 +70,23 @@
     <div class="col-sm-8" style="background-color:red;">
       Posts go here.
     </div>
-    <div class="col-sm-3 col-sm-offset-1">
-      <b>Top fake news of the week:</b>
+    <div class="col-sm-3 col-sm-offset-1" id="">
+      <div class="fakeNewsTitle" style="font-size: 140%" >Top fake news of the week: </div>
       <ol>
         <li>
-          <a href="#TopNews1">TopNews1</a>
+          <div><a href="#TopNews1">TopNews1</a></div>
         </li>
         <li>
-          <a href="#TopNews2">TopNews2</a>
+          <div><a href="#TopNews2">TopNews2</a></div>
         </li>
         <li>
-          <a href="#TopNews3">TopNews3</a>
+          <div><a href="#TopNews3">TopNews3</a></div>
         </li>
         <li>
-          <a href="#TopNews4">TopNews4</a>
+          <div><a href="#TopNews4">TopNews4</a></div>
         </li>
         <li>
-          <a href="#TopNews5">TopNews5</a>
+          <div><a href="#TopNews5">TopNews5</a></div>
         </li>
       </ol>
       <br><br>
