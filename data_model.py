@@ -7,4 +7,4 @@ class Post(ndb.Model):
     link = ndb.StringProperty(required = True)
     date = ndb.DateTimeProperty(required = True, auto_now_add = True)
 
-print Post.query().fetch()[0]
+    #print Post.query().fetch()[0]
