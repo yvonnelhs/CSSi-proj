@@ -1,3 +1,5 @@
+/* fakenewscss starts here */
+
 body {
   background-color: #f4f8f9;
 }
@@ -85,14 +87,21 @@ textarea {
   display: inline-flex;
 }
 
+  /* fakenewscss ends here */
 
-input[type="text"] {
-  width: 100%;
-  display: inline-flex;
+  /* aboutUs css starts here */
+#question{
+  font-size: 135%;
+  color: #62789e;
+  font-weight: bold;
+  padding:10px
 }
 
-textarea {
-  width: 100%;
-  display: inline-flex;
+
+#gettingDeeper{
+  font-weight: 500;
+  font-size: 135%;
+  padding:10px
 }
 
+  /* aboutUs css ends here */
