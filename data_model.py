@@ -1,6 +1,8 @@
 from google.appengine.ext import ndb
+import datetime
 
-class Post(ndb.model):
+class Post(ndb.Model):
     title = ndb.StringProperty(required=True)
-    description = ndb.DateTimeProperty(required=True)
-    link = ndb.StringProperty(required = False)
+    message = ndb.StringProperty(required=True)
+    link = ndb.StringProperty(required = True)
+#    date = ndb.DateTimeProperty(required = True)
