@@ -1,4 +1,4 @@
-/* fakenewscss starts here */
+  /* fakenewscss starts here */
 
 body {
   background-color: #f4f8f9;
@@ -102,6 +102,8 @@ textarea {
   font-weight: 500;
   font-size: 135%;
   padding:10px
+  color: #62789e;
+
 }
 
   /* aboutUs css ends here */
