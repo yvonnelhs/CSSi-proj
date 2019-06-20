@@ -5,6 +5,7 @@
   <meta charset ="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
@@ -12,35 +13,8 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton|Muli&display=swap" rel="stylesheet">
   <link rel="icon" href="../icon2.png">
   <link rel="stylesheet" href="../style/homepage.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript">
-  var count=0;
-    $(document).ready(function(){
-      SetValues();
-      $(window).scroll(function(){
-        //Will check if the user has reached bottom of a PAGE
-        SetValues();
-        //Check for user has reached bottom of Page
-        if($(window).scrollTop()==($(document).height()-window.innerHeight)){
-          $('#loading').fadeIn();
-          setTimeout("appendContent()", 1000);
-        }
-      });
-    });
-    var appendContent=function(){
-      //alert("You are At Bottom");
+  <script src="../javascript/homepage.js"></script>
 
-
-        $('#content').append("---------------------<br>Title: {{fakeNewsTitle}} <br>Link: {{fakeNewsLink}} <br>Message: {{fakeNewsMessage}}<br>---------------------");
-
-      $('#loading').fadeOut();
-    };
-    var SetValues=function(){
-      $('table tr:first-child td:nth-child(2)').html($(window).scrollTop());
-      $('table tr:first-child td:nth-child(4)').html($(document).height());
-      $('table tr:first-child td:nth-child(6)').html(window.innerHeight);//$(window).height()
-    };
-  </script>
 
   <title>FactIt</title>
 </head>
@@ -49,7 +23,7 @@
   <!--Navigation Bar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color:#2f3133;">
     <a class="navbar-brand" href="#">
-      <img src="../icon2.png" >
+      <img src="../icon2.png">
     </a>
     <a class="navbar-brand factit logo" href="#">
       FactIt
@@ -76,7 +50,7 @@
 
   <form method = "post" action = "/addFakeNews">
   <div class="col-md-3 col-md-offset-5">
-    <button class="btn btn-success" type="submit">
+    <button class="btn" type="submit">
       Click here to add fake news
     </button>
   </div>
@@ -88,7 +62,7 @@
         <div class="input-group" style="margin-bottom:40px;">
           <input class="form-control" type="text" name="search" placeholder="Search..." required/>
           <span class="input-group-btn">
-            <button class="btn btn-success" type="submit" value="Search">
+            <button class="btn" type="submit" value="Search">
               Search
               <i class="glyphicon glyphicon-search" style="margin-left:3px;margin-right:3px;"></i>
             </button>
@@ -102,40 +76,50 @@
   <div class="row">
     <div class="col-sm-8" style="background-color:red;">
       Posts go here.
+      <div align="center">{{fakeNewsTitle}}{{fakeNewsLink}}{{fakeNewsMessage}}x5 for starters</div>
 
     </div>
     <div class="col-sm-3 col-sm-offset-1" id="">
       <div class="fakeNewsTitle" style="font-size: 140%;" >Top fake news of the week: </div>
-      <ol>
-        <li>
-          <div><a href="#TopNews1">TopNews1</a></div>
-        </li>
-        <li>
-          <div><a href="#TopNews2">TopNews2</a></div>
-        </li>
-        <li>
-          <div><a href="#TopNews3">TopNews3</a></div>
-        </li>
-        <li>
-          <div><a href="#TopNews4">TopNews4</a></div>
-        </li>
-        <li>
-          <div><a href="#TopNews5">TopNews5</a></div>
-        </li>
+      <ol style="padding-left:30px;list-style-position: inside;">
+        <div>
+          <li>
+            <a href="#TopNews1">TopNews1</a>
+          </li>
+        </div>
+        <div>
+          <li>
+            <a href="#TopNews2">TopNews2</a>
+          </li>
+        </div>
+        <div>
+          <li>
+            <a href="#TopNews3">TopNews3</a>
+          </li>
+        </div>
+        <div>
+          <li>
+            <a href="#TopNews4">TopNews4</a>
+          </li>
+        </div>
+        <div>
+          <li>
+            <a href="#TopNews5">TopNews5</a>
+          </li>
+        </div>
       </ol>
       <br><br>
       <div class="footer" style="font-size:70%;">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </div>
   </div>
 </div>
-<div id="content" align="center"><div>{{fakeNewsTitle}}{{fakeNewsLink}}{{fakeNewsMessage}}</div>
- This is My Content<br/>
-
+<br>
+<div id="content" align="center">
+<br/>
 
 <div id="loading">
- Loading Please Wait......
+ Loading......
 </div>
-
 
 </body>
 
