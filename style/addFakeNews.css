@@ -1,186 +1,112 @@
+/* fakenewscss starts here */
+
 body {
-  background-color: #f4f8f9;
+background-color: #f4f8f9;
 }
 
+h1{
+font-family: 'Muli', sans-serif;
+color: #62789e;
+}
+
+.request{
+font-family: 'Muli', sans-serif;
+padding: 1%;
+font-size: 115%;
+
+}
+
+
+
 .navbar-brand {
-  color: #ffffff;
-  font-size: 240%;
-  display: flex;
-  align-items: center;
+color: #ffffff;
+font-size: 240%;
+display: flex;
+align-items: center;
 
 }
 
 .navbar {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .factit {
-  font-family: 'Monoton', cursive;
+font-family: 'Monoton', cursive;
 }
 
 a > img {
-  height:35px;
+height:35px;
 }
 
 .logo, .logo:enabled {
-  padding-left: 0;
-  padding-bottom: 10px;
-  margin-left: -6px;
-  color: #899ec1;
+padding-left: 0;
+padding-bottom: 10px;
+margin-left: -6px;
+color: #899ec1;
 }
 
 .login,.signup,.aboutus {
-  color: #dbdee0;
-  font-size: 110%
+color: #dbdee0;
+font-size: 110%
 }
 
 .login:hover,.signup:hover,.aboutus:hover, {
-  color: #859cc4;
+color: #859cc4;
 }
 
 .logo:hover{
-  color: #dbdee0;
+color: #dbdee0;
 }
 
-.btn {
-  background-color: #2f3133;
-  border-color: #2f3133;
-  color: #dbdee0;
-  border-width: 0px;
-}
-
-.btn:hover {
-  color: #d9dde0;
-  border-width: 0px;
-  background-color: #45494c;
-}
-
-.btn-nav:hover {
-  background-color: #dbdee0 !important;
-  padding: 1px;
-}
-
-body { //prevent overlay with navbar
-  padding-top: 70px;
-  font-family: 'Muli', sans-serif;
-}
-
-
-.bigg{
-  font-size:800%;
-  color: #62789e
-
-}
-.subtext{
-  margin-top:-01%;
-  font-size:110%;
-  font-family: 'Josefin Sans', sans-seri;
-  padding-bottom: 1px
-}
-
-.col-sm-3.col-sm-offset-1>ol>div>li{
-  background-color:#e1e3e8;
-  margin-left: -30px;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 5%;
-  font-size: 110%
-}
-
-.col-sm-3.col-sm-offset-1>ol>div>li:hover{
-  background-color:#e8eaef;
-  margin-left: -25px;
-  padding-left: 25px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-top: 5%;
-
-}
-
-.col-md-3.col-md-offset-5{
-  padding-bottom: 15px
-
-}
 
 .btn.btn-success {
-
+background-color: #2f3133;
+border-color: #2f3133;
+color: #dbdee0;
+border-width: 0px;
+margin-top: 10px
 }
 
-###############
-
-* {
-  -webkit-border-radius: 1px !important;
-     -moz-border-radius: 1px !important;
-
-          border-radius: 1px !important;
+.btn.btn-success:hover {
+color: #d9dde0;
+border-width: 0px;
+background-color: #45494c;
 }
 
-#logo {
+input[type="text"] {
+width: 100%;
+display: inline-flex;
+}
+
+textarea {
+width: 100%;
+display: inline-flex;
+}
+
+/* fakenewscss ends here */
+
+/* aboutUs css starts here */
+#question{
+font-size: 135%;
 color: #62789e;
-width:100%;
-}
-
-#logo h1 {
-    font-size: 60px;
-    text-shadow: 1px 2px 3px #999;
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-#logo p{
-  padding-bottom: 20px;
+font-weight: bold;
+padding:10px
 }
 
 
-#form-buscar >.form-group >.input-group > .form-control {
-    height: 40px;
-}
-#form-buscar >.form-group >.input-group > .input-group-btn > .btn{
-        height: 40px;
-        font-size: 16px;
-        font-weight: 300;
-
-
-}
-#form-buscar >.form-group >.input-group > .input-group-btn > .btn .glyphicon{
- margin-right:12px;
-}
-
-
-#form-buscar >.form-group >.input-group > .form-control {
-    font-size: 16px;
-    font-weight: 300;
+#gettingDeeper{
+font-weight: 500;
+font-size: 135%;
+padding:8px;
+color: #62789e;
 
 }
 
-#form-buscar >.form-group >.input-group > .form-control:focus {
-  border-color: #33A444;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(0, 109, 0, 0.8);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(0, 109, 0, 0.8);
-}
-##############
+/* aboutUs css ends here */
 
-
-ol {
-  margin-top: 4%;
-
-}
-
-#footer {
-height:30px;
-margin: 0;
-clear: both;
-width:100%;
-}
-
-.form-control:hover {
+.black:focus {
   border-color: black;
-}
 
-.form-control:focus {
-  border-color: #000000 !important;
 }
