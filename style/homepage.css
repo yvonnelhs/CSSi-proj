@@ -10,12 +10,10 @@ body {
 
 }
 
-.navbar { //removes default border radius of 4px
+.navbar {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%
-
+    border-radius: 0;
 }
 
 .factit {
@@ -82,13 +80,6 @@ body { //prevent overlay with navbar
   padding-bottom: 1px
 }
 
-/*
-#curveBox{
-  border-radius: 10px;
-  background: #d2d6dd;
-}
-*/
-
 .col-sm-3.col-sm-offset-1>ol>div>li{
   background-color:#e1e3e8;
   margin-left: -30px;
@@ -106,11 +97,12 @@ body { //prevent overlay with navbar
   padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 5%;
-}
 
+}
 
 .col-md-3.col-md-offset-5{
   padding-bottom: 15px
+
 }
 
 .btn.btn-success {
@@ -172,12 +164,10 @@ width:100%;
 }
 ##############
 
-ol {
-  list-style-position: inside; padding-left: 0;
-}
 
 ol {
   margin-top: 4%;
+
 }
 
 #footer {
@@ -185,6 +175,14 @@ height:30px;
 margin: 0;
 clear: both;
 width:100%;
+}
+
+.form-control:hover {
+  border-color: black;
+}
+
+.form-control:focus {
+  border-color: #000000 !important;
 }
 
 #newsTitle {
@@ -206,13 +204,13 @@ width:100%;
   color: #2f3133;
 }
 
-.boxes{
+.wrapping{
   background-color: #d2d6dd;
   padding: 15px;
   border-radius: 10px;
 }
 
-.boxes:hover{
+.wrapping:hover{
   background-color: #e3e5e8;
   padding: 15px;
   border-radius: 10px;
