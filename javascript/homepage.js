@@ -4,12 +4,12 @@ $(document).ready(function(){
     //Check for user has reached bottom of Page
     if($(window).scrollTop()==($(document).height()-window.innerHeight)){
       $('#loading').fadeIn();
-      setTimeout("appendContent()", 1000);
+      setTimeout("appendContent()", 500);
     }
   });
 });
 var appendContent=function(){
-  $('#content').prepend("---------------------<br>Title: {{fakeNewsTitle}} <br>Link: {{fakeNewsLink}} <br>Message: {{fakeNewsMessage}}<br>---------------------");
+  $('.boxes').append("<br>Title: {{fakeNewsTitle}} <br>Link: {{fakeNewsLink}} <br>Message: {{fakeNewsMessage}}<br><hr>");
 
   $('#loading').fadeOut();
 };
