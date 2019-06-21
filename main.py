@@ -47,7 +47,7 @@ class AddFakeNews(webapp2.RequestHandler):
         addnews = the_jinja_env.get_template('templates/addFakeNews.html')
         self.response.write(addnews.render())
     def post(self):
-        postresults = the_jinja_env.get_template('templates/homepage.html')
+
         fakenews_title = self.request.get('title')
         fakenews_link = self.request.get('link')
         fakenews_message = self.request.get('message')
@@ -71,7 +71,7 @@ class AddFakeNews(webapp2.RequestHandler):
            "fakeNewsTitle": fakenews_title
         }
 
-        self.response.write(postresults.render(dict))
+        self.redirect('/')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
