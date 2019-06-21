@@ -1,4 +1,4 @@
-var count=0;
+
 $(document).ready(function(){
   $(window).scroll(function(){
     //Check for user has reached bottom of Page
@@ -9,7 +9,7 @@ $(document).ready(function(){
   });
 });
 var appendContent=function(){
-  $('.boxes').append("<br>Title: {{fakeNewsTitle}} <br>Link: {{fakeNewsLink}} <br>Message: {{fakeNewsMessage}}<br><hr>");
+  $('.boxes').append('<br><div style="background-color:#f4f8f9; padding:10px;"></div><div class="wrapping"><div id="newsTitle">Title: {{fakeNewsTitle}}</div><div id="newsLink">Link: <a href={{fakeNewsLink}}>{{fakeNewsLink}}</a></div><div id="newsContent">Description:{{fakeNewsMessage}}</div></div>');
 
   $('#loading').fadeOut();
 };
