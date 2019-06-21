@@ -11,10 +11,9 @@
 
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton|Muli&display=swap" rel="stylesheet">
-  <link rel="icon" href="../icon2.png">
+  <link rel="icon" href="https://raw.githubusercontent.com/yvonnelhs/CSSi-proj/master/icon2.png">
   <link rel="stylesheet" href="../style/homepage.css">
   <script src="../javascript/homepage.js"></script>
-
 
   <title>FactIt</title>
 </head>
@@ -22,10 +21,10 @@
 <body>
   <!--Navigation Bar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color:#2f3133;">
-    <a class="navbar-brand" href="#">
-      <img src="../icon2.png">
+    <a class="navbar-brand" href="/">
+      <img src="https://raw.githubusercontent.com/yvonnelhs/CSSi-proj/master/icon2.png">
     </a>
-    <a class="navbar-brand factit logo" href="#">
+    <a class="navbar-brand factit logo" href="/">
       FactIt
     </a>
     <div class="navbar-collapse collapse">
@@ -35,9 +34,6 @@
         </li>
         <li>
           <a href="/login" class="login">Log in</a>
-        </li>
-        <li>
-          <a href="/signup" class="signup">Sign up</a>
         </li>
       </ul>
     </div>
@@ -50,9 +46,7 @@
 
   <form method = "post" action = "/addFakeNews">
   <div class="col-md-3 col-md-offset-5">
-    <button class="btn" type="submit">
-      Click here to add fake news
-    </button>
+    <a href="/addfakenews" class="btn">Click here to add fake news</a>
   </div>
   </form>
 
@@ -74,13 +68,18 @@
 
   <div class="container">
   <div class="row">
-    <div class="col-sm-8" style="background-color:red;">
-      Posts go here.
-      <div align="center">{{fakeNewsTitle}}{{fakeNewsLink}}{{fakeNewsMessage}}x5 for starters</div>
-
+    <div class="col-sm-8">
+      <div align="center" class="boxes">
+        <b>{{fakeNewsTitle}}</b>
+        <br>
+        <a href={{fakeNewsLink}}>{{fakeNewsLink}}</a>
+        <br>
+        {{fakeNewsMessage}}
+        <hr>
+      </div>
     </div>
     <div class="col-sm-3 col-sm-offset-1" id="">
-      <div class="fakeNewsTitle" style="font-size: 140%;" >Top fake news of the week: </div>
+      <div class="fakeNewsTitle" style="font-size: 140%;" >Latest fake news: </div>
       <ol style="padding-left:30px;list-style-position: inside;">
         <div>
           <li>
